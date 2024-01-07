@@ -1,0 +1,6 @@
+
+# virtual environment
+myWebsiteVenv/*
+
+# settings file with Django Key
+WebSiteTimeAssist/WebSiteTimeAssist/settings.py
