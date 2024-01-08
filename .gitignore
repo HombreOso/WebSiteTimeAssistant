@@ -3,4 +3,4 @@
 myWebsiteVenv/*
 
 # settings file with Django Key
-WebSiteTimeAssist/WebSiteTimeAssist/settings.py
+WebSiteTimeAssist/WebSiteTimeAssist/django_secret_key.py
