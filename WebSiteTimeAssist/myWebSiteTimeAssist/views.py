@@ -58,3 +58,10 @@ def delete_account(request):
     user.delete()
 
     return redirect('home')
+
+
+def user_profile(request):
+    return render(request, 'user_profile.html')
+
+def delete_account(request):
+    return render(request, 'delete_account.html')
