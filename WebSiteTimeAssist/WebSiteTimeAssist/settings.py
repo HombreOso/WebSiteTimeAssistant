@@ -19,7 +19,8 @@ import firebase_admin
 from firebase_admin import credentials
 
 cred = credentials.Certificate("T:/024_time_mgmt_app/service-account-key-user-account-deletion.json")
-firebase_admin.initialize_app(cred)
+if not firebase_admin._apps:
+    firebase_admin.initialize_app(cred)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,9 +32,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-import django_secret_key
-SECRET_KEY = django_secret_key.SECRET_KEY_DJANGO
-
+from .django_secret_key import SECRET_KEY_DJANGO
+SECRET_KEY = SECRET_KEY_DJANGO
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
