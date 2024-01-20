@@ -19,6 +19,7 @@ def delete_account(request):
     db = firestore.client()
     user_uid = str(user.id)
     logger.info("USER_UID %s", user_uid)
+
     if False:
         # delete users collection documents
         user_ref_list = db.collection('users').where("uid", "==", user_uid).get()
@@ -63,7 +64,7 @@ def delete_account(request):
         # Delete Django user account
         user.delete()
 
-    return redirect('/home')
+    # return redirect('/home/')
 
 
 def user_profile(request):

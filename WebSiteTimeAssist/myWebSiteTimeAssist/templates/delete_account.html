@@ -1,7 +1,7 @@
 <!-- delete_account.html -->
 
 <h2>Delete Account</h2>
-<form method="post" action="{% url 'delete_account' %}">
+<form method="post" action="{% url 'home' %}">
     {% csrf_token %}
     <button type="submit">Delete My Account</button>
 </form>
