@@ -64,7 +64,7 @@ def delete_account(request):
         # Delete Django user account
         user.delete()
 
-    return redirect('/home/')
+    return redirect('/')
 
 
 def user_profile(request):
