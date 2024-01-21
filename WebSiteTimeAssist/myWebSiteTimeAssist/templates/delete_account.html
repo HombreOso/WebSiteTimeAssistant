@@ -1,7 +1,11 @@
 <!-- delete_account.html -->
 
 <h2>Delete Account</h2>
-<form method="post" action="{% url 'home' %}">
+
+<p>Are you sure you want to delete your account?</p>
+
+<!-- <form method="post" action="{% url 'home' %}"> -->
+<form method="post" action="/delete_account_decided/">
     {% csrf_token %}
     <input type="text" name="username" id="username" placeholder="Email">
     <input type="password" name="password" id="password" placeholder="Password">
